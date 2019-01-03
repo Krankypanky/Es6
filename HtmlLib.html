@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Arrow Functions</title>
+</head>
+
+<body>
+
+<div class="parentParent">
+    <p>Der Text</p>
+    <div class="ewrew">
+        <div class="test">
+            <p>Uii</p>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+        class View {
+            constructor() {
+                this.view = document
+            }
+
+            find(selector, element = false) {
+                return element ? element.querySelector(selector) : this.view.querySelector(selector);
+            }
+
+            findMultiple(selector, element = false) {
+                return element ? this.view.querySelectorAll(selector) : element.querySelectorAll(selector);
+            }
+
+            closestByClassName(target, className) {
+                if (target.classList.contains(className)) return target;
+                if (!target.parentElement) return null;
+                return this.closestByClassName(target.parentElement, className);
+            }
+
+            insert(parent, html, before = false) {
+                before ?
+                    parent.insertBefore(html, parent.firstElementChild) :
+                    parent.insertBefore(html, parent.lastChild.element);
+            }
+        }
+
+        const view = new View;
+
+
+        const testDiv = view.find(".test");
+        const enclosingTestDivParent = view.closestByClassName(testDiv, "parentParent");
+        const node = document.createElement("span");
+        node.innerHTML = `<small>Bam Oida</small>`;
+        view.insert(enclosingTestDivParent, node, false)
+
+    });
+
+
+</script>
+</body>
+
+</html>

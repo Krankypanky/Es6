@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Arrow Functions</title>
+</head>
+
+<body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+        class Car{
+            constructor(name, brand) {
+                this.name = name;
+                this.brand = brand;
+            }
+
+            set newName(newName) {
+                this.name = newName
+            }
+
+            get getName(){
+                return this.name
+            }
+
+            get getBrand(){
+                return this.brand
+            }
+        }
+
+        class SportCar extends Car{
+            constructor(name, brand) {
+                super();
+                //Wenn ein Konstruktor verwendet wird, muss das super
+                // Schlüsselwort verwendet werden, bevor das this Schlüsselwort verwendet werden kann.
+                // Mit dem super Schlüsselwort kann man auch Funktionen im Vaterobjekt ausführen.
+
+                this.name = name;
+                this.brand = brand;
+            }
+
+            get getCar(){
+                return `${this.getBrand} ${this.getName}`
+            }
+        }
+
+        let myCar = new Car("Almera", "Nissan");
+        myCar.newName = "Duke";
+        console.log(myCar.getName);
+
+        let dreamCar = new SportCar("Calardo", "Lamborghini");
+        console.log(dreamCar.getCar);
+
+    });
+
+
+</script>
+</body>
+
+</html>
