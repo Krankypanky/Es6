@@ -4,27 +4,24 @@
 <head>
     <title>Arrow Functions</title>
 </head>
+<main>
+    <button class="normal">Normal Function</button>
+    <button class="arrow">Arrow Function</button>
+</main>
 
 <body>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", () => {
+        document.querySelector(".normal").addEventListener("click", function (event) {
+            console.log(event.target, "target");
+            console.log(this, "this");
+        });
 
-        class Car{
-            constructor(name, brand) {
-                this.name = name;
-                this.brand = brand;
-            }
-
-
-
-
-        }
-
-
-
-        console.log(dreamCar.getName);
-
+        document.querySelector(".arrow").addEventListener("click", (event) => {
+            console.log(event.target, "target");
+            console.log(this, "this");
+        });
     });
 
 
