@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Object Literals</title>
+</head>
+
+
+<body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const getLaptop = (made, model, year) => {
+            return {
+                made,
+                model,
+                year
+            }
+        };
+
+        getLaptop("Apple", "MacBook", "2015"); // {made: "Apple", model: "MacBook", year: "2015"}
+    });
+
+
+</script>
+</body>
+
+</html>
