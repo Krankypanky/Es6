@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Rest Operator</title>
+</head>
+
+<body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        //der letzte muss immer der REST-Operator sein!
+        function createNameWithTitles(firstName, lastName, ...titles) {
+            let fullName = "";
+            titles.length >= 0 && titles.map((title) => fullName += title + " ");
+            fullName += lastName + " ";
+            fullName += firstName;
+            return fullName;
+        }
+
+        const fullName = createNameWithTitles("Julius", "Caesar", "Consul", "Imperator");
+        console.log(fullName);
+    });
+
+
+</script>
+</body>
+
+</html>

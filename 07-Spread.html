@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Spread Operator</title>
+</head>
+
+<ul>
+    <li class="test"></li>
+    <li class="test"></li>
+    <li class="test"></li>
+    <li class="test"></li>
+    <li class="test"></li>
+    <li class="test"></li>
+    <li class="test"></li>
+    <li class="test"></li>
+</ul>
+
+<body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const baum = "baum";
+        const baumArray = [...baum];
+        const myList = document.querySelectorAll(".test");
+        console.log(myList);
+        [...myList].map((li) => console.log(li))
+
+
+    });
+</script>
+</body>
+
+</html>

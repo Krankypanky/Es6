@@ -12,17 +12,19 @@
 <body>
 
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        document.querySelector(".normal").addEventListener("click", function (event) {
-            console.log(event.target, "target");
+
+        document.querySelector(".normal").addEventListener("click", function () {
             console.log(this, "this");
         });
 
-        document.querySelector(".arrow").addEventListener("click", (event) => {
-            console.log(event.target, "target");
+
+        document.querySelector(".arrow").addEventListener("click", () => {
             console.log(this, "this");
         });
-    });
+
+        // arrow functions können einzeilig returnen
+        //(cars) => cars.title;
+
 
 
 </script>
